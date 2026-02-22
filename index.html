@@ -114,7 +114,7 @@
             </div>
         </div>
 
-        <!-- API Key Manager (Zedt l-khasiya bach t-beddel l-key manualment ila wqe3 mochkil) -->
+        <!-- API Key Manager -->
         <div id="apiErrorBar" class="hidden bg-red-500/20 border-b border-red-500/50 p-3 text-xs text-center flex flex-col items-center gap-2">
             <span class="text-red-400"><i class="fas fa-exclamation-triangle mr-1"></i> Erreur d'authentification (401). Votre clé API semble invalide.</span>
             <input type="password" id="manualKey" placeholder="Entrez une nouvelle clé OpenRouter ici..." class="bg-black/40 border border-white/10 rounded px-2 py-1 w-64 text-center outline-none focus:border-red-500">
@@ -163,8 +163,8 @@
     </div>
 
     <script>
-        // L-key l-jdida dialek hya hadi:
-        let currentApiKey = "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";
+        // API Key jdida dyalek hya hadi:
+        let currentApiKey = "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";
         
         const chatBox = document.getElementById('chatBox');
         const chatForm = document.getElementById('chatForm');
@@ -181,7 +181,7 @@
         function updateLanguage() {
             const lang = langSelect.value;
             userInput.placeholder = {fr: "Posez votre question...", en: "Ask me anything...", es: "Hazme una pregunta..."}[lang];
-            chatHistory[0].content = `Tu es Nova. Réponds exclusivement en ${lang}. Interdiction d'utiliser la Darija. Utilise Markdown.`;
+            chatHistory[0].content = `Tu es Nova. Réponds exclusivement en ${lang}. Pas de Darija. Utilise Markdown.`;
         }
 
         function changeTheme(p, s) {
